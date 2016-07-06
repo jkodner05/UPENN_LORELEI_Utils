@@ -18,8 +18,8 @@ def convert_text(intext):
 def read_file_as_lines(inputfile):
     with open(inputfile, "r") as f:
         for line in f:
-            decodedline = line.strip().decode('utf8')
-            print convert_text(decodedline)
+            decodedline = line.decode('utf8').strip()
+            print convert_text(decodedline).encode("utf8")
 #           print decodedline, convert_text(decodedline)
 
 if __name__ == "__main__":
